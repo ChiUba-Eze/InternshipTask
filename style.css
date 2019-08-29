@@ -1,0 +1,150 @@
+@charset "utf-8";
+@viewport { width: device-width; }
+/*
+Author:   Chinyere Uba-Eze.
+Title:    CSS Document
+*/
+
+h1,h2,h3,h4,h5,h6,img,p,table,tr,td,span,strong,label,input,select,section,div,header,textarea{margin:0; padding:0;}
+a img{border:none;}
+a{text-decoration:none; margin:0; padding:0; outline:none; color: inherit;}
+ul,li{list-style-type: none; padding: 0; margin: 0;}
+table td {vertical-align: top;}
+
+html {
+  box-sizing: border-box;
+  
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body{
+    width: 100%;
+    margin:0; padding:0;
+    margin: 0 auto; 
+}
+.cvWrapper{
+  width:30%;
+  
+  margin: 0 auto;
+  background-color: #3f3d3e;
+  float: left;
+}
+
+.overlayBk{
+  z-index: 1000;
+  position: absolute;
+  width: 30%;
+ background-color: #3c3c3c;
+ opacity:0.5; }
+
+.imageBk{
+  z-index: 900;
+}
+.overlayName{
+  z-index: 1000;
+  position: absolute;
+  background-color: #09ff84;
+  bottom: 243px;
+  text-align: center;
+  width: 30%;
+  font-size: 27px;
+  padding: 25px 10px;
+  opacity:0.7;
+  color: #fff;
+  font-family: 'Open sans', sans-serif;
+}
+.overlayName2{
+  text-align:center;
+  width: 100%;
+  margin-top: 20px;
+  color: #fff;
+ 
+}
+.overlayName1{
+  text-align:center;
+  width: 100%;
+  margin-top: 20px;
+  color: #fff;
+}
+.overlayName1 h4, .overlayName2 h4{
+  font-size: 25px;
+  margin:  20px;
+   background-color: #09ff84;
+   padding: 10px;
+   font-family: 'Jura', sans-serif;
+}
+.overlayName1 p, .overlayName2 p{
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-family: 'Open sans', sans-serif;
+}
+.cvWrapper2{
+  width:70%;
+  margin: 0 auto;
+  background-color: #ffffff;
+  float: left;
+}
+.cvWrapper2:after{
+  content: '';
+  display: table;
+  clear: both;
+}
+.cvCont{
+  margin: 50px 20px 0 20px;
+  width: 90%;
+  border-top: 2px solid grey;
+  padding: 15px 2px;
+  color: #6b6b6b;
+}
+.cvCont h4, .cvCont1 h4, .cvCont2 h4{
+  color: #00f47a;
+  font-size: 24px;
+  padding: 10px 0 5px 0;
+  font-family: 'Jura', sans-serif;
+}
+.cvCont p, .cvCont1 p, .cvCont2 p{
+  font-size: 16px;
+  padding: 10px 0;
+  font-family: 'Open sans', sans-serif;
+}
+.cvCont1, .cvCont2{
+  margin: 20px 20px 0 20px;
+  width: 90%;
+  border-top: 2px solid grey;
+  padding: 15px 2px;
+  color: #6b6b6b;
+}
+.Sch{
+  font-size: 22px;
+}
+.Course{
+  color: #00f47a;
+  font-size: 18px;
+  font-family: 'Open sans', sans-serif;
+}
+
+
+
+
+/************* style display for screen not more than 509px and min of 300px     Breakpoint 4  ******/
+@media (min-width: 200px) and (max-width:550px) {
+
+
+.overlayName1 h4, .overlayName2 h4{
+  font-size: 9px;
+  
+}
+
+.overlayName1 p, .overlayName2 p{
+  font-size: 17px;
+ 
+}
+
+
+
+

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta name="Author" content="Elgiva Stephen." />
+        <meta name="robots" content="index,follow">
+        <meta http-equiv="content-type" content="text/html charset=UTF-8"/ >
+        <title>form</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="styleforkigali.css">
+        <link href="https://fonts.googleapis.com/css?family=Jura|Open+Sans|Ubuntu" rel="stylesheet">
+       
+   </head>
+   <body>
+      
+   <div class="regformWrapper">
+            
+        <section class="registerWrapper">
+	    
+	        <div class="regTitle">
+                    Kigali Form Sheet
+                </div>
+		
+	<form id="RegForm" method="post" onsubmit="return Validate()">
+	 
+	      <section class="formCont">
+	         
+	      <div  class="fullwidth">
+		
+		<label for="firstname">First Name</label>
+		 
+		<input onchange="" type="text" id="firstname" name="firstname" tabindex="1" placeholder="firstname" class="inputfield" />  
+		<span id="Error1" style="font-size: 12px;color:red;margin-left: 20px;"></span>
+		
+		
+	       </div>  
+	       
+	     <div  class="fullwidth">
+		
+		<label for="lastname" style=" margin-left: 15px;" > Last Name</label>
+		<input  type="name" id="lastname" name="lastname" tabindex="2" placeholder="lastame" style=" margin-left: 15px;"  class="inputfield" />
+		<span id="Error2" style="font-size: 12px;color:red;margin-left: 20px;"></span>
+		
+	      </div>
+	   
+	 </section>
+	 
+	 <section class="formCont">
+	    
+	    <div  class="fullwidth">
+		
+		<label for="email">Email</label>
+		
+		<input type="email" id="email" name="email" tabindex="3" placeholder="Email" class="inputfield" />
+		<span id="Error3" style="font-size: 12px;color:red;margin-left: 20px;"></span>
+		
+	     </div>
+	     
+	      <div  class="fullwidth">
+		
+		<label for="phone" style=" margin-left: 15px;" >Phone</label>
+		<input type="text" value="" id="phone" name="phone" tabindex="4" placeholder="phone" style=" margin-left: 15px;" class="inputfield" />
+		<span id="Error4" style="font-size: 12px;color:red;margin-left: 20px;"></span>
+		
+	      </div>
+	      <p style="clear: both;"></p>
+	  </section>  
+	    
+	    
+	    <div class="guTTerLi">
+		
+		<label for="location">  Where are you studying from?</label>
+			<select value="" type="text" id="location" name="location" tabindex="5">
+			  <option value="Abuja">Abuja</option>
+			  <option value="Delta">Delta</option>
+			  <option value="Enugu">Enugu</option>
+			  <option value="Lagos">Lagos</option>
+			  <option value="Ondo">Ondo</option>
+			  <option></option>
+			</select>
+	        
+	       <span id="Error5" style="font-size: 12px;color:red;margin-left: 20px;"></span>
+	       
+	      </div>
+	    
+	     <div  class="fullWidth">
+	       <p>What are you interested in studying?</p>
+	       <ul>
+		  <li>
+		     <label for="software"> 
+			<input type="radio" value="software" id="software" name="course"/> 
+			  <span>Software Engineering </span>
+		     </label>
+		  </li>
+		  <li>
+		     <label for="datascience"> 
+			<input type="radio" value="datascience" id="datascience" name="course"/> 
+			Data Science/Machine Learning 
+		     </label>
+		  </li>
+	          <li>
+		     <label for="uiux"> 
+			<input type="radio" value="uiux" id="uiux" name="course"/> 
+			UI/UX Design
+		     </label>
+		  </li>   
+               </ul>  
+	     </div>
+	     
+	    
+	    <p class="pclear"></p>
+	  
+	  
+	</section>
+      </div>
+      
+        
+      
+      
+      <div class=" loginsubm ">
+	<section class="registerWrapper">
+        <input onclick=""  type="submit" name="" value="Apply Now"  class="loginField" />
+	
+	</section>
+      </div>
+      
+      </form>
+	
+	<script>
+	 
+
+     // SELECTING ALL TEXT ELEMENTS
+     function Validate()
+     {    
+      const firstname = document.forms['RegForm']['firstname'];
+      const lastname = document.forms['RegForm'][ 'lastname'];
+      const email = document.forms['RegForm']['email'];
+      
+   // SELECTING ALL ERROR DISPLAY ELEMENTS
+   const firstname_error = document.getElementById('Error1');
+   const lastname_error = document.getElementById('Error2');
+   const email_error = document.getElementById('Error3');
+   
+   
+   // SETTING ALL EVENT LISTENERS
+   firstname.addEventListener( 'blur', firstnameVerify, true);
+   lastname.addEventListener('blur', lastnameVerify, true);
+   email.addEventListener('blur', emailVerify, true);
+   
+   // validation function
+   
+   
+     // validate fisrtname
+     if (firstname.value == "") {
+       Error1.textContent = "firstname is required";
+       firstname.focus();
+       return false;
+     }
+     // validate firstname
+     if (firstname.value.length < 3) {
+       Error1.textContent = "firstname must be at least 3 characters";
+       firstname.focus();
+       return false;
+     }
+  // validate lastname
+  if (lastname.value == "") {
+    Error2.textContent = "lastname is required";
+    lastname.focus();
+    return false;
+  }
+  // validate lasttname
+  if (lastname.value.length < 3) {
+    Error2.textContent = "lastname must be at least 3 characters";
+    lastname.focus();
+    return false;
+  }
+  // validate email
+  if (email.value == "") {
+    email.focus();
+    return false;
+  }
+  
+}
+   // event handler functions
+   
+   function firstnameVerify() {
+     if (firstname.value != "") {
+      firstname.style.border = "1px solid red";
+      document.getElementById('Error1').style.color = "red";
+      Error1.innerHTML = "";
+      return true;
+     }
+   }
+   function lastnameVerify() {
+     if (lastname.value != "") {
+      lastname.style.border = "1px solid red";
+      document.getElementById('Error2').style.color = "red";
+      Error2.innerHTML = "";
+      return true;
+     }
+   }
+   function emailVerify() {
+     if (email.value != "") {
+	   email.style.border = "1px solid red";
+	   document.getElementById('Error3').style.color = "red";
+	   Error3.innerHTML = "";
+	   return true;
+  }
+}
+
+
+ 
+ 	 
+		 
+
+</script>
+  
+    </section>
+	 
+    </div>
+   
+   
+   
+   
+   
+   
+   
+   
+   </body>
+</html>
